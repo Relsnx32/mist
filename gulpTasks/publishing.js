@@ -47,6 +47,8 @@ gulp.task('checksums', (cb) => {
 
 gulp.task('upload-binaries', (cb) => {
     // if CI detected only upload if on master branch
+        console.info('Checking Github releases...', process.env.TRAVIS_BRANC);
+    console.log('Checking Github releases...', process.env.TRAVIS_BRANC);
     if (process.env.CI && process.env.TRAVIS_BRANCH !== 'master') return;
 
     // personal access token (public_repo) must be set using travis' ENVs
