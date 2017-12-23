@@ -23,6 +23,7 @@ Q.config({
     cancellation: true,
 });
 
+
 global.store = configureReduxStore();
 
 Settings.init();
